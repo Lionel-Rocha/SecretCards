@@ -49,7 +49,7 @@ socket.on('roomsList', (rooms) => {
         option.className = 'option_card';
 
         const img = document.createElement('img');
-        img.src = '../images/roomlogo.png';
+        img.src = '/../images/roomlogo.png';
         option.appendChild(img);
 
         const text = document.createElement('p');
