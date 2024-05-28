@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+:root{
+    --primary100:#6495ed;
+    --primary600:#afc3f6;
+    --dark200: #282828;
+}
+
+h1 {
+
+    text-align: center;
+}
+
+h3{
+    color: var(--primary600);
+    text-align: center;
+}
+
+button {
+    margin: 5px;
+}
+
+input, select {
+    margin: 5px;
+    padding: 5px;
+}
+
+a {
+    display: block;
+    margin: 10px 0;
+}
+
+#joinRoomDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.option_card{
+    background: linear-gradient(45deg, #6495ED, #4682B4, #226FA2, #1E4D92);
+    padding: 7px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#leaveRoomDiv, #hand{
+    display: none;
+}
+
+#createRoomDiv{
+    margin-top: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#createRoomDiv button{
+    background: var(--primary100);
+    padding: 7px;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+}
+
+.hand_card{
+    background-color: #fff;
+    width: 120px;
+    height: 200px;
+    margin-left: 20px;
+    color: var(--dark200);
+}
