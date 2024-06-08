@@ -213,21 +213,21 @@ function revealChoices(room) {
 
     const player1Choice = choices[playerIds[0]];
     const player2Choice = choices[playerIds[1]];
-
+    console.log(player1Choice, player2Choice);
     let winner;
 
     if (player1Choice === player2Choice) {
         winner = 'TIE';
     } else if (
-        (player1Choice === 'rock' && player2Choice === 'scissors') ||
-        (player1Choice === 'scissors' && player2Choice === 'paper') ||
-        (player1Choice === 'paper' && player2Choice === 'rock')
+        (player1Choice === 'ROCK' && player2Choice === 'SCISSORS') ||
+        (player1Choice === 'SCISSORS' && player2Choice === 'PAPER') ||
+        (player1Choice === 'PAPER' && player2Choice === 'ROCK')
     ) {
         winner = playerIds[0];
     } else if (
-        (player2Choice === 'rock' && player1Choice === 'scissors') ||
-        (player2Choice === 'scissors' && player1Choice === 'paper') ||
-        (player2Choice === 'paper' && player1Choice === 'rock')
+        (player2Choice === 'ROCK' && player1Choice === 'SCISSORS') ||
+        (player2Choice === 'SCISSORS' && player1Choice === 'PAPER') ||
+        (player2Choice === 'PAPER' && player1Choice === 'ROCK')
     ) {
         winner = playerIds[1];
     } else {
