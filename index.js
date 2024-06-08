@@ -16,10 +16,10 @@ const roomLastActivity = {}; //each room last activity
 let choiceTimeouts = {};
 //app.use(express.static(path.join(__dirname, 'public')));
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-// });
 app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 io.on('connection', (socket) => {
     socket.emit('roomsList', rooms);
 
@@ -237,7 +237,7 @@ function revealChoices(room) {
     playerChoices[room] = {};
     delete choiceTimeouts[room];
 } 
-});
+
 server.listen(port, () => {
     console.log('Listening on *: ', port);
 });
