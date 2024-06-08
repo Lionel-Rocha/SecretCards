@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js" integrity="sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/secretjs@1.9.3/dist/browser.min.js"></script>
+    <script src="transactions.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+<h3>cards, rock, paper & scissors</h3>
+
+<h1 id = "available">available rooms</h1>
+
+
+
+<div id="joinRoomDiv">
+
+</div>
+
+<div id="createRoomDiv">
+    <h3>...or create a room</h3>
+    <input id="roomInput" type="text" placeholder="Enter room name">
+    <button id="createRoomBtn" onclick="createRoom()">Create Room</button>
+</div>
+
+<div id="leaveRoomDiv">
+
+    <button onclick="leaveRoom()">Leave room</button>
+</div>
+
+<div id="hand">
+
+</div>
+
+</body>
+</html>
