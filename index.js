@@ -215,28 +215,33 @@ function revealChoices(room) {
     const player2Choice = choices[playerIds[1]];
 
     let winner;
+
     if (player1Choice === player2Choice) {
-        // It's a tie
         winner = 'TIE';
     } else if (
         (player1Choice === 'rock' && player2Choice === 'scissors') ||
         (player1Choice === 'scissors' && player2Choice === 'paper') ||
         (player1Choice === 'paper' && player2Choice === 'rock')
     ) {
-        // Player 1 wins
         winner = playerIds[0];
-    } else {
-        // Player 2 wins
+    } else if (
+        (player2Choice === 'rock' && player1Choice === 'scissors') ||
+        (player2Choice === 'scissors' && player1Choice === 'paper') ||
+        (player2Choice === 'paper' && player1Choice === 'rock')
+    ) {
         winner = playerIds[1];
+    } else {
+        // Handle the case where one or both players have NO_CHOICE
+        winner = 'NO_WINNER';
     }
 
     io.to(room).emit('revealChoices', choices);
     io.to(room).emit('winner', winner);
 
-    // Reset choices and timeout
     playerChoices[room] = {};
     delete choiceTimeouts[room];
-} 
+}
+
 
 server.listen(port, () => {
     console.log('Listening on *: ', port);
