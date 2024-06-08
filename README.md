@@ -37,6 +37,13 @@ https://github.com/Lionel-Rocha/SecretCards/assets/111009073/739555e0-65b5-4255-
 
 </div>
 
+## Technical stuff
+
+➥ Code is written in Node.js using Express, but I have used vanilla HTML + CSS + JS in the frontend. 
+➥ Multiplayer rooms were made with Socket.io
+➥ Secret.js was used to make the connection between wallet and application. I could make it work with vanilla JS using a workaround.
+➥ I did not write a contract, just used the "raffle contract" at *secret1sszujacjmtfcm2yc37gvl57sy06qcs86wqrwp2*.
+
 ## Known issues
 
 ➥ The room may alert "You've already left this room" even when entering a room for the first time. Just refresh the page.
